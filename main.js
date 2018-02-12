@@ -75,8 +75,72 @@ for (var i=0; i<citiesArray.length; i++){
     }
 }
 displayResults(newArray,"19.");
+
 // 20 
+var newArray = [];
+for (var i=0; i<lotrCitiesArray.length; i++){
+    if (lotrCitiesArray[i].endsWith("or")){
+        newArray.push(lotrCitiesArray[i]);
+    }
+}
+displayResults(newArray,"20.");
 
+// 21
+var newArray = [];
+for (var i=0; i<words.length; i++){
+    if (words[i].startsWith("b")){
+        newArray.push(words[i]);
+    }
+}
+displayResults(newArray,"21.");
 
+//22
+var yesno = "No";
+if (lotrCitiesArray.includes("Mirkwood")){
+    yesno = "Yes";
+}
+displayResults(yesno,"22.");
 
+// 23
+var yesno = "No";
+if (lotrCitiesArray.includes("Hollywood")){
+    yesno = "Yes";
+}
+displayResults(yesno,"23.");
 
+// 24
+var vindex = lotrCitiesArray.indexOf("Mirkwood");
+displayResults(vindex,"24.");
+
+// 25
+var firstTwoWordCity = "";
+for (var i= 0; i<lotrCitiesArray; i++){
+    if (lotrCitiesArray[i].includes(" ")){
+        firstTwoWordCity = lotrCitiesArray[i];
+    }
+}
+displayResults(firstTwoWordCity,"25.");
+
+// 26
+displayResults(lotrCitiesArray.reverse(),"26.");
+
+// 27
+displayResults(lotrCitiesArray.sort(),"27.");
+
+// 28
+
+// 29
+var vremoved = lotrCitiesArray.pop();
+displayResults(lotrCitiesArray,"29.");
+
+// 30
+var newlength = lotrCitiesArray.push("Rohan");
+displayResults(lotrCitiesArray,"30.");
+
+// 31
+var vremoved = lotrCitiesArray.shift();
+displayResults(lotrCitiesArray,"31.");
+
+// 32
+var newlength = lotrCitiesArray.unshift("Beleriand");
+displayResults(lotrCitiesArray,"32.");
