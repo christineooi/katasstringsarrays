@@ -114,8 +114,8 @@ displayResults(vindex,"24.");
 
 // 25
 var firstTwoWordCity = "";
-for (var i= 0; i<lotrCitiesArray; i++){
-    if (lotrCitiesArray[i].indexOf(" ") !== -1){
+for (var i= 0; i<lotrCitiesArray.length; i++){
+    if (lotrCitiesArray[i].includes(" ")){
         firstTwoWordCity = lotrCitiesArray[i];
     }
 }
@@ -128,6 +128,18 @@ displayResults(lotrCitiesArray.reverse(),"26.");
 displayResults(lotrCitiesArray.sort(),"27.");
 
 // 28
+function lengthSort(a, b){
+    alen = a.length;
+    blen = b.length;
+    if (alen === blen){
+        return 0;
+    } else if(alen > blen){
+        return 1;
+    } else {
+        return -1;
+    }
+}
+displayResults(lotrCitiesArray.sort(lengthSort),"28.");
 
 // 29
 var vremoved = lotrCitiesArray.pop();
