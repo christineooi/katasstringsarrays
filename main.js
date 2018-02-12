@@ -115,7 +115,7 @@ displayResults(vindex,"24.");
 // 25
 var firstTwoWordCity = "";
 for (var i= 0; i<lotrCitiesArray; i++){
-    if (lotrCitiesArray[i].includes(" ")){
+    if (lotrCitiesArray[i].indexOf(" ") !== -1){
         firstTwoWordCity = lotrCitiesArray[i];
     }
 }
